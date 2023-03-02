@@ -1,2 +1,3 @@
 embedApp
 dist
+!public/dist
