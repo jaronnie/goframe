@@ -30,7 +30,10 @@ var serverCmd = &cobra.Command{
 		base := fmt.Sprintf("%s:%s", "0.0.0.0", "8081")
 
 		go func() {
-			r.Run(base)
+			if err := r.Run(base); err != nil {
+				panic(err)
+			}
+
 		}()
 
 		// Wait for interrupt signal to gracefully shutdown the server with
