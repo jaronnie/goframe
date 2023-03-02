@@ -46,12 +46,12 @@ jobs:
 
       - name: Docker build and push
         run: |
-          docker build -t jaronnie/embedApp:${{ steps.get_version.outputs.VERSION }} .
-          docker push jaronnie/embedApp:${{ steps.get_version.outputs.VERSION }}
-          docker tag jaronnie/embedApp:${{ steps.get_version.outputs.VERSION }} jaronnie/embedApp:latest
-          docker push jaronnie/embedApp:latest
+          docker build -t jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }} .
+          docker push jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}
+          docker tag jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }} jaronnie/embedapp:latest
+          docker push jaronnie/embedapp:latest
 
-          docker build -t jaronnie/embedApp:${{ steps.get_version.outputs.VERSION }}-arm64 -f Dockerfile-arm64 .
-          docker push jaronnie/embedApp:${{ steps.get_version.outputs.VERSION }}-arm64
-          docker tag jaronnie/embedApp:${{ steps.get_version.outputs.VERSION }}-arm64 jaronnie/embedApp:latest-arm64
-          docker push jaronnie/embedApp:latest-arm64
+          docker build -t jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}-arm64 -f Dockerfile-arm64 .
+          docker push jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}-arm64
+          docker tag jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}-arm64 jaronnie/embedapp:latest-arm64
+          docker push jaronnie/embedapp:latest-arm64
