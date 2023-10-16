@@ -1,4 +1,4 @@
-module github.com/jaronnie/embedApp
+module github.com/jaronnie/goframe
 
 go 1.20
 

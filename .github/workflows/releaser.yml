@@ -1,4 +1,4 @@
-name: goreleaser-embedApp
+name: goreleaser-goframe
 
 on:
   push:
@@ -46,12 +46,12 @@ jobs:
 
       - name: Docker build and push
         run: |
-          docker build -t jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }} .
-          docker push jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}
-          docker tag jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }} jaronnie/embedapp:latest
-          docker push jaronnie/embedapp:latest
+          docker build -t jaronnie/goframe:${{ steps.get_version.outputs.VERSION }} .
+          docker push jaronnie/goframe:${{ steps.get_version.outputs.VERSION }}
+          docker tag jaronnie/goframe:${{ steps.get_version.outputs.VERSION }} jaronnie/goframe:latest
+          docker push jaronnie/goframe:latest
 
-          docker build -t jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}-arm64 -f Dockerfile-arm64 .
-          docker push jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}-arm64
-          docker tag jaronnie/embedapp:${{ steps.get_version.outputs.VERSION }}-arm64 jaronnie/embedapp:latest-arm64
-          docker push jaronnie/embedapp:latest-arm64
+          docker build -t jaronnie/goframe:${{ steps.get_version.outputs.VERSION }}-arm64 -f Dockerfile-arm64 .
+          docker push jaronnie/goframe:${{ steps.get_version.outputs.VERSION }}-arm64
+          docker tag jaronnie/goframe:${{ steps.get_version.outputs.VERSION }}-arm64 jaronnie/goframe:latest-arm64
+          docker push jaronnie/goframe:latest-arm64

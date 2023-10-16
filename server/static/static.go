@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jaronnie/embedApp/public"
+	"github.com/jaronnie/goframe/public"
 )
 
 func Static(r *gin.RouterGroup, f fs.FS) {

@@ -17,9 +17,9 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "embedApp",
-	Short: "use golang's embed feature to build a front-backend app.",
-	Long:  `use golang's embed feature to build a front-backend app.`,
+	Use:   "goframe",
+	Short: "goframe template",
+	Long:  `goframe template`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -41,7 +41,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.embedApp.toml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.goframe.toml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
@@ -58,10 +58,10 @@ func initConfig() {
 		home, err := os.UserHomeDir()
 		cobra.CheckErr(err)
 
-		// Search config in home directory with name ".embedApp" (without extension).
+		// Search config in home directory with name ".goframe" (without extension).
 		viper.AddConfigPath(home)
 		viper.SetConfigType("toml")
-		viper.SetConfigName(".embedApp")
+		viper.SetConfigName(".goframe")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match

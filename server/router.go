@@ -3,9 +3,9 @@ package server
 import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/jaronnie/embedApp/public"
-	apiv1 "github.com/jaronnie/embedApp/server/api/v1"
-	"github.com/jaronnie/embedApp/server/static"
+	"github.com/jaronnie/goframe/public"
+	apiv1 "github.com/jaronnie/goframe/server/api/v1"
+	"github.com/jaronnie/goframe/server/static"
 )
 
 func Router(e *gin.Engine) {

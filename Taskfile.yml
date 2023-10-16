@@ -5,7 +5,7 @@ tasks:
     deps:
       - build
     cmds:
-      - cp dist/embedApp_{{OS}}_{{ARCH}}/embedApp $GOBIN
+      - cp dist/goframe_{{OS}}_{{ARCH}}/goframe $GOBIN
     silent: true
   build:
     cmds:

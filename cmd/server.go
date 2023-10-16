@@ -14,15 +14,15 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jaronnie/embedApp/server"
+	"github.com/jaronnie/goframe/server"
 	"github.com/spf13/cobra"
 )
 
 // serverCmd represents the server command
 var serverCmd = &cobra.Command{
 	Use:   "server",
-	Short: "embedApp server",
-	Long:  `embedApp server`,
+	Short: "goframe server",
+	Long:  `goframe server`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r := gin.New()
 		server.Cors(r)
